@@ -56,7 +56,8 @@ persist.camera.gyro.disable=0 \
 persist.camera.isp.clock.optmz=0 \
 persist.camera.stats.test=5 \
 persist.vendor.qti.telephony.vt_cam_interface=2 \
-vidc.enc.dcvs.extra-buff-count=2
+vidc.enc.dcvs.extra-buff-count=2 \
+persist.vendor.camera.HAL3.enabled=1
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -73,7 +74,6 @@ debug.egl.hw=0 \
 debug.enable.sglscale=1 \
 debug.gralloc.enable_fb_ubwc=1 \
 debug.mdpcomp.logs=0 \
-debug.sf.enable_hwc_vds=1 \
 debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
 debug.cpurend.vsync=false \
@@ -117,7 +117,6 @@ ro.gps.agps_provider=1
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
 av.debug.disable.pers.cache=1 \
-debug.sf.enable_hwc_vds=1 \
 media.aac_51_output_enabled=true \
 media.msm8956hw=0 \
 media.stagefright.audio.sink=280 \
@@ -225,11 +224,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.usb.config.extra=none
 
 # USB debugging
-PRODUCT_PROPERTY_OVERRIDES += \
-persist.sys.usb.config=mtp,adb \
-ro.adb.secure=0 \
-ro.secure=0 \
-ro.debuggable=1
+#PRODUCT_PROPERTY_OVERRIDES += \
+#persist.sys.usb.config=mtp,adb \
+#ro.adb.secure=0 \
+#ro.secure=0 \
+#ro.debuggable=1
 
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
