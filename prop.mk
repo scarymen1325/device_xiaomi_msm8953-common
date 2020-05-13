@@ -47,17 +47,27 @@ ro.qualcomm.bt.hci_transport=smd
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
-camera.display.lmax=1280x720 \
-camera.display.umax=1920x1080 \
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk \
+persist.vendor.camera.display.lmax=1280x720 \
+persist.vendor.camera.display.umax=1920x1080 \
 camera.lowpower.record.enable=1 \
 media.camera.ts.monotonic=1 \
+persist.camera.CDS=off \
+persist.camera.video.CDS=off \
+persist.camera.eis.enable=1 \
+persist.camera.dual.camera=0 \
 persist.camera.gyro.disable=0 \
 persist.camera.isp.clock.optmz=0 \
 persist.camera.stats.test=5 \
-persist.vendor.qti.telephony.vt_cam_interface=2 \
+persist.vendor.qti.telephony.vt_cam_interface=1 \
 vidc.enc.dcvs.extra-buff-count=2 \
-persist.vendor.camera.HAL3.enabled=1
+vendor.camera.lowpower.record.enable=1 \
+camera.hal1.packagelist=com.whatsapp,com.android.camera2,com.instagram.android \
+vendor.camera.hal1.packagelist=com.whatsapp,com.android.camera2,com.instagram.android \
+vendor.camera.aux.packageblacklist=com.discord \
+persist.camera.HAL3.enabled=1 \
+persist.vendor.camera.HAL3.enabled=1 \
+vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera2,com.google.android.GoogleCamera \
+vendor.camera.aux.packagelist2=com.google.android.GoogleCameraWide,com.dual.GCam,com.Wide.GCam,com.Tele.GCam 
 
 # Cne/Dpm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -217,7 +227,7 @@ net.tcp.2g_init_rwnd=10
 
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
-sys.use_fifo_ui=1
+sys.use_fifo_ui=0
 
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
